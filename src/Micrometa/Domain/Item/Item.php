@@ -65,7 +65,7 @@ class Item implements ItemInterface
     public function __construct(
         $type,
         array $properties = [],
-        $itemId = null,
+        string $itemId = null,
         $itemLanguage = null,
         PropertyListFactoryInterface $propertyListFactory = null
     ) {
