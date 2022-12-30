@@ -94,7 +94,7 @@ class PropertyList implements PropertyListInterface
      *
      * @return int Number of properties
      */
-    public function count()
+    public function count(): int
     {
         return count($this->values);
     }
@@ -102,9 +102,9 @@ class PropertyList implements PropertyListInterface
     /**
      * Return the current property values
      *
-     * @return array Property values
+     * @return mixed Property values
      */
-    public function current()
+    public function current(): mixed
     {
         return $this->values[$this->cursor];
     }
@@ -112,7 +112,7 @@ class PropertyList implements PropertyListInterface
     /**
      * Move forward to next element
      */
-    public function next()
+    public function next(): void
     {
         ++$this->cursor;
     }
@@ -122,7 +122,7 @@ class PropertyList implements PropertyListInterface
      *
      * @return \stdClass IRI key
      */
-    public function key()
+    public function key(): mixed
     {
         return $this->names[$this->cursor];
     }
@@ -132,7 +132,7 @@ class PropertyList implements PropertyListInterface
      *
      * @return boolean The current position is valid
      */
-    public function valid()
+    public function valid(): bool
     {
         return isset($this->values[$this->cursor]);
     }
@@ -140,7 +140,7 @@ class PropertyList implements PropertyListInterface
     /**
      * Rewind the Iterator to the first element
      */
-    public function rewind()
+    public function rewind(): void
     {
         $this->cursor = 0;
     }
